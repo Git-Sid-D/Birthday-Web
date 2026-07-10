@@ -7,6 +7,9 @@ const countdownText = document.getElementById("countdownText");
 const birthdayTitle = document.getElementById("birthdayTitle");
 const birthdaySub = document.getElementById("birthdaySub");
 const continueBtn = document.getElementById("continueBtn");
+
+const subtitle = document.querySelector(".subtitle");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -72,6 +75,7 @@ noBtn.addEventListener("click", () => {
     }
     else if (tries == 2){
         title.innerHTML = "Kiti khot bolnar? 😂";
+        subtitle.style.display = "none";
     }
     else if (tries == 3){
         title.innerHTML = "Ho var click kar na... 🤭";
