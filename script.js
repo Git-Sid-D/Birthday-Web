@@ -74,8 +74,12 @@ noBtn.addEventListener("click", () => {
         title.innerHTML = "Aga khar khar sang... 😏";
     }
     else if (tries == 2){
-        title.innerHTML = "Kiti khot bolnar? 😂";
-        subtitle.style.display = "none";
+         title.innerHTML = "Kiti khot bolnar? 😂";
+         subtitle.classList.add("fade-out");
+
+          setTimeout(() => {
+          subtitle.style.display = "none";
+             }, 400);
     }
     else if (tries == 3){
         title.innerHTML = "Ho var click kar na... 🤭";
