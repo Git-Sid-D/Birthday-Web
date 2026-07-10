@@ -30,8 +30,6 @@ console.log(typeof confetti);
 function launchBalloons(){
 
     const container = document.getElementById("balloon-container");
-
-    balloon.style.border = "3px solid black";
   
     const colors = [
         "#ff4d4d",
