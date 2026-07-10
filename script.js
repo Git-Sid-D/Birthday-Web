@@ -19,7 +19,7 @@ let tries = 0;
 const title = document.querySelector(".title");
 
 function launchConfetti() {
-
+console.log(typeof confetti);
     confetti({
         particleCount: 220,
         spread: 170,
