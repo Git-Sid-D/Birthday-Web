@@ -16,13 +16,23 @@ const funnyMessages = [
 
 let tries = 0;
 
+const title = document.querySelector(".title");
+
 noBtn.addEventListener("click", () => {
 
     tries++;
 
-    alert(funnyMessages[Math.min(tries - 1, funnyMessages.length - 1)]);
-
-    if (tries >= 4) {
+    if (tries == 1){
+        title.innerHTML = "Aga khar khar sang... 😏";
+    }
+    else if (tries == 2){
+        title.innerHTML = "Kiti khot bolnar? 😂";
+    }
+    else if (tries == 3){
+        title.innerHTML = "Ho var click kar na... 🤭";
+    }
+    else{
+        title.innerHTML = "Ata fakta 'Ho' available aahe 😎";
         noBtn.style.display = "none";
         return;
     }
