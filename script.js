@@ -18,6 +18,16 @@ let tries = 0;
 
 const title = document.querySelector(".title");
 
+function launchConfetti() {
+
+    confetti({
+        particleCount: 220,
+        spread: 170,
+        origin: { y: 0.6 }
+    });
+
+}
+
 noBtn.addEventListener("click", () => {
 
     tries++;
@@ -69,6 +79,8 @@ yesBtn.addEventListener("click", () => {
 
             countdownText.style.display = "none";
 
+            launchConfetti();
+          
             birthdayTitle.style.display = "block";
 
             birthdaySub.style.display = "block";
