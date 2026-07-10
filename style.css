@@ -283,3 +283,7 @@ button{
         transform:translateY(-120vh);
     }
 }
+.fade-out{
+    opacity:0;
+    transition:.4s;
+}
