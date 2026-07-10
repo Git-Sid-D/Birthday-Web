@@ -82,23 +82,24 @@ noBtn.addEventListener("click", () => {
         return;
     }
 
-     // Screen size
-    const screenW = window.innerWidth;
-    const screenH = window.innerHeight;
+     const padding = 20;
 
-    // Button size
-    const btnW = noBtn.offsetWidth;
-    const btnH = noBtn.offsetHeight;
+const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+const maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
-    // Margin taaki edge se chipke nahi
-    const margin = 20;
+const randomX = Math.max(
+    padding,
+    Math.random() * maxX
+);
 
-    const randomX = Math.random() * (screenW - btnW - margin * 2) + margin;
-    const randomY = Math.random() * (screenH - btnH - margin * 2) + margin;
+const randomY = Math.max(
+    padding,
+    Math.random() * maxY
+);
 
-    noBtn.style.position = "fixed";
-    noBtn.style.left = `${randomX}px`;
-    noBtn.style.top = `${randomY}px`;
+noBtn.style.position = "fixed";
+noBtn.style.left = randomX + "px";
+noBtn.style.top = randomY + "px";
   
 });
 yesBtn.addEventListener("click", () => {
