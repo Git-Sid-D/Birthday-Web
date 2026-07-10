@@ -31,6 +31,8 @@ function launchBalloons(){
 
     const container = document.getElementById("balloon-container");
 
+    balloon.style.border = "3px solid black";
+  
     const colors = [
         "#ff4d4d",
         "#ffcc00",
@@ -122,7 +124,7 @@ yesBtn.addEventListener("click", () => {
             clearInterval(timer);
 
             countdownText.style.display = "none";
-            alert("Confetti Called");  
+           
             launchConfetti();
             launchBalloons();
           
