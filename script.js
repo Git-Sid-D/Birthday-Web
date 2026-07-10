@@ -122,7 +122,7 @@ yesBtn.addEventListener("click", () => {
             clearInterval(timer);
 
             countdownText.style.display = "none";
-
+            alert("Confetti Called");  
             launchConfetti();
             launchBalloons();
           
