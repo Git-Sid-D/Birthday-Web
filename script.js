@@ -19,7 +19,6 @@ let tries = 0;
 const title = document.querySelector(".title");
 
 function launchConfetti() {
-console.log(typeof confetti);
     confetti({
         particleCount: 220,
         spread: 170,
@@ -60,24 +59,6 @@ function launchBalloons(){
         setTimeout(() => {
             balloon.remove();
         }, 8000);
-
-    }
-}
-const balloon=document.createElement("div");
-
-        balloon.classList.add("balloon");
-
-        balloon.style.left=Math.random()*100+"vw";
-
-        balloon.style.background=colors[Math.floor(Math.random()*colors.length)];
-
-        balloon.style.animationDuration=(5+Math.random()*3)+"s";
-
-        container.appendChild(balloon);
-
-        setTimeout(()=>{
-            balloon.remove();
-        },8000);
 
     }
 }
