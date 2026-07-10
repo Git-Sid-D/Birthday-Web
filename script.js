@@ -84,22 +84,12 @@ noBtn.addEventListener("click", () => {
 
      const padding = 20;
 
-const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+     const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding * 2);
+     const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding * 2);
 
-const randomX = Math.max(
-    padding,
-    Math.random() * maxX
-);
-
-const randomY = Math.max(
-    padding,
-    Math.random() * maxY
-);
-
-noBtn.style.position = "fixed";
-noBtn.style.left = randomX + "px";
-noBtn.style.top = randomY + "px";
+     noBtn.style.position = "fixed";
+     noBtn.style.left = (randomX + padding) + "px";
+     noBtn.style.top = (randomY + padding) + "px";
   
 });
 yesBtn.addEventListener("click", () => {
