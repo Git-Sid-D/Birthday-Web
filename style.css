@@ -39,6 +39,7 @@ body{
 }
 
 .glass-card{
+    position: relative;
     width:100%;
     max-width:360px;
     background:rgba(255,255,255,.28);
