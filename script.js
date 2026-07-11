@@ -24,13 +24,17 @@ const funnyMessages = [
 const memeImages = [
     "https://picsum.photos/400/500?random=1",
     "https://picsum.photos/400/500?random=2",
-    "https://picsum.photos/400/500?random=3"
+    "https://picsum.photos/400/500?random=3",
+    "https://picsum.photos/400/500?random=4",
+    "https://picsum.photos/400/500?random=5"
 ];
 
 const memeCaptions = [
     "😎 Warning: Professional Chapri Detected!",
     "😂 Smile Level: 999+",
-    "🌸 Birthday Queen Loading..."
+    "🌸 Birthday Queen Loading...",
+    "Pan kharach... Tu khup sundar diste ❤️",
+    "Happy Birthday Rashmi! Ha divas fakta tujhyasathi... 🎂✨"
 ];
 
 let memeIndex = 0;
