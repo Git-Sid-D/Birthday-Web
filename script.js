@@ -74,9 +74,18 @@ noBtn.addEventListener("click", () => {
 
     if (tries == 1){
         title.innerHTML = "Aga khar khar sang... 😏";
+        noBtn.style.left = "20px";
+        noBtn.style.top = "180px";
+        noBtn.style.right = "";
+        noBtn.style.bottom = "";
+      
     }
     else if (tries == 2){
          title.innerHTML = "Kiti khot bolnar? 😂";
+         noBtn.style.left = "";
+         noBtn.style.top = "";
+         noBtn.style.right = "20px";
+         noBtn.style.bottom = "20px";
          subtitle.classList.add("fade-out");
 
           setTimeout(() => {
@@ -85,6 +94,10 @@ noBtn.addEventListener("click", () => {
     }
     else if (tries == 3){
         title.innerHTML = "Ho var click kar na... 🤭";
+        noBtn.style.left = "";
+        noBtn.style.top = "180px";
+        noBtn.style.right = "20px";
+        noBtn.style.bottom = "";
     }
     else{
         title.innerHTML = "Ata fakta 'Ho' available aahe 😎";
@@ -93,10 +106,10 @@ noBtn.addEventListener("click", () => {
     }
      //problem lines
      // Glass card ki position
-const cardRect = glassCard.getBoundingClientRect();
+    const cardRect = glassCard.getBoundingClientRect();
 
-// Title ki height
-const titleBottom =
+    // Title ki height
+    const titleBottom =
     title.getBoundingClientRect().bottom - cardRect.top;
 
 // Button size
