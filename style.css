@@ -641,3 +641,99 @@ button{
     line-height:1.6;
 
 }
+/* ===========================
+   FEATURE 6 : PIZZA SCREEN
+=========================== */
+
+.pizza-card{
+
+    width:100%;
+    max-width:380px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.30);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+    animation:cardUp .8s ease;
+
+}
+
+.pizza-icon{
+
+    font-size:70px;
+
+    animation:bounce 1.2s infinite;
+
+}
+
+.pizza-card h1{
+
+    color:#ff5d9e;
+
+    margin-top:10px;
+
+}
+
+.pizza-card h2{
+
+    color:#444;
+
+    margin:15px 0;
+
+}
+
+.pizza-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+#finishBtn{
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    background:#ff6fa8;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
