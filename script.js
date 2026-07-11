@@ -98,7 +98,7 @@ noBtn.addEventListener("click", () => {
     else{
         alert("Fourth click");
         title.innerHTML = "Ata fakta 'Ho' available aahe 😎";
-        noBtn.style.display = "none";
+        noBtn.remove();
         return;
     }
     
