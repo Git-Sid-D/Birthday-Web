@@ -68,33 +68,40 @@ function launchBalloons(){
 function moveOutsideCard() {
 
     const card = document.querySelector(".glass-card");
-
     const rect = card.getBoundingClientRect();
 
-    const btnW = noBtn.offsetWidth;
-    const btnH = noBtn.offsetHeight;
+    const pos = [
+        // Left
+        {
+            x: rect.left - noBtn.offsetWidth - 20,
+            y: rect.top + rect.height / 2
+        },
 
-    let x, y;
+        // Right
+        {
+            x: rect.right + 20,
+            y: rect.top + rect.height / 2
+        },
 
-    do {
-        const margin = 20;
-        x = margin + Math.random() * (window.innerWidth - btnW - margin * 2);
-        y = margin + Math.random() * (window.innerHeight - btnH - margin * 2);
+        // Bottom Left
+        {
+            x: rect.left,
+            y: rect.bottom + 20
+        },
 
-    } while (
+        // Bottom Right
+        {
+            x: rect.right - noBtn.offsetWidth,
+            y: rect.bottom + 20
+        }
+    ];
 
-        x < rect.right + 20 &&
-        x + btnW > rect.left - 20 &&
-        y < rect.bottom + 20 &&
-        y + btnH > rect.top - 20
-
-    );
+    const p = pos[(tries - 1) % pos.length];
 
     noBtn.style.position = "fixed";
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+    noBtn.style.left = p.x + "px";
+    noBtn.style.top = p.y + "px";
 }
-
 noBtn.addEventListener("click", () => {
   
     tries++;
