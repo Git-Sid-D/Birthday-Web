@@ -26,6 +26,9 @@ const birthdayMessage = `<< YOUR MESSAGE HERE >>`;
 const countdownScreen = document.getElementById("countdownScreen");
 const liveCountdown = document.getElementById("liveCountdown");
 
+const pizzaScreen = document.getElementById("pizzaScreen");
+const finishBtn = document.getElementById("finishBtn");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -177,7 +180,11 @@ function startCountdown() {
 
             liveCountdown.innerHTML = "00:00:00";
 
-            alert("🍕 Pizza Surprise Screen");
+            countdownScreen.style.display = "none";
+
+            pizzaScreen.style.display = "flex";
+
+            launchConfetti();
 
             return;
         }
@@ -314,5 +321,12 @@ lastSurpriseBtn.addEventListener("click", () => {
     countdownScreen.style.display = "flex";
 
     startCountdown();
+
+});
+finishBtn.addEventListener("click", () => {
+
+    launchConfetti();
+
+    alert("🎉 Happy Birthday Rashmi! 🎂");
 
 });
