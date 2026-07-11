@@ -77,16 +77,16 @@ function moveOutsideCard() {
     let x, y;
 
     do {
-
-        x = Math.random() * (window.innerWidth - btnW);
-        y = Math.random() * (window.innerHeight - btnH);
+        const margin = 20;
+        x = margin + Math.random() * (window.innerWidth - btnW - margin * 2);
+        y = margin + Math.random() * (window.innerHeight - btnH - margin * 2);
 
     } while (
 
-        x + btnW > rect.left &&
-        x < rect.right &&
-        y + btnH > rect.top &&
-        y < rect.bottom
+        x < rect.right + 20 &&
+        x + btnW > rect.left - 20 &&
+        y < rect.bottom + 20 &&
+        y + btnH > rect.top - 20
 
     );
 
