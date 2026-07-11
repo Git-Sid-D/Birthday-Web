@@ -67,9 +67,37 @@ function launchBalloons(){
 }
 
 noBtn.addEventListener("click", () => {
-
+  
     tries++;
+    function moveOutsideCard() {
 
+    const card = document.querySelector(".glass-card");
+
+    const rect = card.getBoundingClientRect();
+
+    const btnW = noBtn.offsetWidth;
+    const btnH = noBtn.offsetHeight;
+
+    let x, y;
+
+    do {
+
+        x = Math.random() * (window.innerWidth - btnW);
+        y = Math.random() * (window.innerHeight - btnH);
+
+    } while (
+
+        x + btnW > rect.left &&
+        x < rect.right &&
+        y + btnH > rect.top &&
+        y < rect.bottom
+
+    );
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
     if (tries == 1){
         title.innerHTML = "Aga khar khar sang... 😏";
         moveOutsideCard();
