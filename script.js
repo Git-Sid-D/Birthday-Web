@@ -10,12 +10,30 @@ const continueBtn = document.getElementById("continueBtn");
 
 const subtitle = document.querySelector(".subtitle");
 
+const memeScreen = document.getElementById("memeScreen");
+const memeImage = document.getElementById("memeImage");
+const memeCaption = document.getElementById("memeCaption");
+const nextMemeBtn = document.getElementById("nextMemeBtn");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
   "🤭 Ho var click kar.",
   "😏 Kiti khot bolnar?"
 ];
+const memeImages = [
+    "https://picsum.photos/400/500?random=1",
+    "https://picsum.photos/400/500?random=2",
+    "https://picsum.photos/400/500?random=3"
+];
+
+const memeCaptions = [
+    "😎 Warning: Professional Chapri Detected!",
+    "😂 Smile Level: 999+",
+    "🌸 Birthday Queen Loading..."
+];
+
+let memeIndex = 0;
 
 let tries = 0;
 
@@ -167,5 +185,35 @@ yesBtn.addEventListener("click", () => {
         }
 
     },1000);
+
+});
+continueBtn.addEventListener("click", () => {
+
+    birthdayScreen.style.display = "none";
+    memeScreen.style.display = "flex";
+
+});
+
+nextMemeBtn.addEventListener("click", () => {
+
+    memeIndex++;
+
+    if (memeIndex >= memeImages.length) {
+
+        alert("💌 Birthday Message Screen (Feature 4)");
+
+        return;
+    }
+
+    memeImage.style.opacity = "0";
+
+    setTimeout(() => {
+
+        memeImage.src = memeImages[memeIndex];
+        memeCaption.innerHTML = memeCaptions[memeIndex];
+
+        memeImage.style.opacity = "1";
+
+    },300);
 
 });
