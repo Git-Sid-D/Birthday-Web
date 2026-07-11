@@ -10,6 +10,8 @@ const continueBtn = document.getElementById("continueBtn");
 
 const subtitle = document.querySelector(".subtitle");
 
+const glassCard = document.querySelector(".glass-card");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -89,28 +91,38 @@ noBtn.addEventListener("click", () => {
         noBtn.style.display = "none";
         return;
     }
+     //problem lines
+     // Glass card ki position
+const cardRect = glassCard.getBoundingClientRect();
 
-     const viewport = window.visualViewport || window;
+// Title ki height
+const titleBottom =
+    title.getBoundingClientRect().bottom - cardRect.top;
 
-    const btnW = noBtn.offsetWidth;
-    const btnH = noBtn.offsetHeight;
+// Button size
+const btnW = noBtn.offsetWidth;
+const btnH = noBtn.offsetHeight;
 
-    const padding = 20;
+// Padding
+const padding = 20;
 
-    // Title ke niche se movement start hoga
-    const titleBottom = title.getBoundingClientRect().bottom;
-    const minY = titleBottom + 40;
-  
-    // Screen ke andar hi rahe
-    const maxX = viewport.width - btnW - padding;
-    const maxY = viewport.height - btnH - padding;
+// X movement
+const minX = padding;
+const maxX = cardRect.width - btnW - padding;
 
-    const randomX = Math.random() * (maxX - padding) + padding;
-    const randomY = Math.random() * (maxY - minY) + minY;
+// Y movement (title ke niche se)
+const minY = titleBottom + 50;
+const maxY = cardRect.height - btnH - padding;
 
-    noBtn.style.position = "fixed";
-    noBtn.style.left = `${randomX}px`;
-    noBtn.style.top = `${randomY}px`;
+const randomX =
+    Math.random() * (maxX - minX) + minX;
+
+const randomY =
+    Math.random() * (maxY - minY) + minY;
+
+noBtn.style.position = "absolute";
+noBtn.style.left = randomX + "px";
+noBtn.style.top = randomY + "px";
   
 });
 yesBtn.addEventListener("click", () => {
