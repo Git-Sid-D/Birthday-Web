@@ -119,7 +119,8 @@ noBtn.addEventListener("click", () => {
     }
     else{
         title.innerHTML = "Ata fakta 'Ho' available aahe 😎";
-        noBtn.style.display = "none";
+        console.log(noBtn);
+        noBtn.remove();
     }
     
 });
