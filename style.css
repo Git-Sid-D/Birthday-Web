@@ -122,6 +122,7 @@ button{
 
 #noBtn{
     background:white;
+    display: inline-block !important;
     color:#444;
 }
 
