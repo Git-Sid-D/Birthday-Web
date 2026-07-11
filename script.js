@@ -73,13 +73,13 @@ function moveOutsideCard() {
     const pos = [
         // Left
         {
-            x: rect.left - noBtn.offsetWidth - 20,
+            x: Math.max(20, rect.left - noBtn.offsetWidth - 20),
             y: rect.top + rect.height / 2
         },
 
         // Right
         {
-            x: rect.right + 20,
+            x: Math.min(rect.right + 20, window.innerWidth - noBtn.offsetWidth - 20),
             y: rect.top + rect.height / 2
         },
 
@@ -91,7 +91,7 @@ function moveOutsideCard() {
 
         // Bottom Right
         {
-            x: rect.right - noBtn.offsetWidth,
+            x: Math.min(rect.right - noBtn.offsetWidth, window.innerWidth - noBtn.offsetWidth - 20),
             y: rect.bottom + 20
         }
     ];
