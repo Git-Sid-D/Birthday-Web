@@ -21,6 +21,8 @@ const letterContent = document.getElementById("letterContent");
 const typewriterText = document.getElementById("typewriterText");
 const lastSurpriseBtn = document.getElementById("lastSurpriseBtn");
 
+const birthdayMessage = `<< YOUR MESSAGE HERE >>`;
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -130,6 +132,30 @@ function moveOutsideCard() {
     noBtn.style.left = p.x + "px";
     noBtn.style.top = p.y + "px";
 }
+function startTypewriter() {
+
+    let i = 0;
+
+    typewriterText.innerHTML = "";
+
+    const typing = setInterval(() => {
+
+        if (i < birthdayMessage.length) {
+
+            typewriterText.innerHTML += birthdayMessage.charAt(i);
+            i++;
+
+        } else {
+
+            clearInterval(typing);
+
+            lastSurpriseBtn.style.display = "inline-block";
+
+        }
+
+    }, 35);
+
+}
 noBtn.addEventListener("click", () => {
   
     tries++;
@@ -209,7 +235,8 @@ nextMemeBtn.addEventListener("click", () => {
     memeIndex++;
 
     if (memeIndex >= memeImages.length) {
-
+        memeScreen.style.display="none";
+        letterScreen.style.display="flex";
         return;
     }
 
@@ -223,5 +250,16 @@ nextMemeBtn.addEventListener("click", () => {
         memeImage.style.opacity = "1";
 
     },300);
+
+});
+openLetterBtn.addEventListener("click", () => {
+
+    document.getElementById("envelope").style.display = "none";
+
+    openLetterBtn.style.display = "none";
+
+    letterContent.style.display = "block";
+
+    startTypewriter();
 
 });
