@@ -90,14 +90,27 @@ noBtn.addEventListener("click", () => {
         return;
     }
 
-     const padding = 20;
+     const viewport = window.visualViewport || window;
 
-     const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding * 2);
-     const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding * 2);
+    const btnW = noBtn.offsetWidth;
+    const btnH = noBtn.offsetHeight;
 
-     noBtn.style.position = "fixed";
-     noBtn.style.left = (randomX + padding) + "px";
-     noBtn.style.top = (randomY + padding) + "px";
+    const padding = 20;
+
+    // Title ke niche se movement start hoga
+    const titleBottom = title.getBoundingClientRect().bottom;
+    const minY = titleBottom + 40;
+  
+    // Screen ke andar hi rahe
+    const maxX = viewport.width - btnW - padding;
+    const maxY = viewport.height - btnH - padding;
+
+    const randomX = Math.random() * (maxX - padding) + padding;
+    const randomY = Math.random() * (maxY - minY) + minY;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
   
 });
 yesBtn.addEventListener("click", () => {
