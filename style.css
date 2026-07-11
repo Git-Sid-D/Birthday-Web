@@ -393,3 +393,173 @@ button{
     transform:scale(1.08);
 
 }
+/* ===========================
+   FEATURE 4 : LETTER SCREEN
+=========================== */
+
+.letter-card{
+
+    width:100%;
+    max-width:380px;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+    animation:cardUp .8s ease;
+
+}
+
+#envelope{
+
+    width:220px;
+
+    height:150px;
+
+    margin:20px auto;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#ffd6e8,#fff3d9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+#envelope:hover{
+
+    transform:scale(1.05) rotate(-2deg);
+
+}
+
+.envelope-front h2{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.envelope-front h3{
+
+    color:#555;
+
+    line-height:1.5;
+
+    font-weight:600;
+
+}
+
+#openLetterBtn{
+
+    margin-top:20px;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    background:#ff6fa8;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#openLetterBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+#letterContent{
+
+    display:none;
+
+    margin-top:30px;
+
+    animation:fadeIn .8s ease;
+
+}
+
+#letterContent h2{
+
+    color:#ff4f8b;
+
+    margin-bottom:18px;
+
+}
+
+#typewriterText{
+
+    min-height:130px;
+
+    text-align:left;
+
+    line-height:1.8;
+
+    color:#444;
+
+    white-space:pre-line;
+
+}
+
+#lastSurpriseBtn{
+
+    display:none;
+
+    margin-top:25px;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    background:#ff6fa8;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#lastSurpriseBtn:hover{
+
+    transform:scale(1.08);
+
+}
