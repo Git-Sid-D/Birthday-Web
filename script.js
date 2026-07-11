@@ -10,8 +10,6 @@ const continueBtn = document.getElementById("continueBtn");
 
 const subtitle = document.querySelector(".subtitle");
 
-const glassCard = document.querySelector(".glass-card");
-
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -73,6 +71,7 @@ noBtn.addEventListener("click", () => {
     tries++;
 
     if (tries == 1){
+        noBtn.style.position = "fixed";
         title.innerHTML = "Aga khar khar sang... 😏";
         noBtn.style.left = "20px";
         noBtn.style.top = "180px";
@@ -81,6 +80,7 @@ noBtn.addEventListener("click", () => {
       
     }
     else if (tries == 2){
+         noBtn.style.position = "fixed";
          title.innerHTML = "Kiti khot bolnar? 😂";
          noBtn.style.left = "";
          noBtn.style.top = "";
@@ -93,6 +93,7 @@ noBtn.addEventListener("click", () => {
              }, 400);
     }
     else if (tries == 3){
+        noBtn.style.position = "fixed";
         title.innerHTML = "Ho var click kar na... 🤭";
         noBtn.style.left = "";
         noBtn.style.top = "180px";
@@ -104,38 +105,6 @@ noBtn.addEventListener("click", () => {
         noBtn.style.display = "none";
         return;
     }
-     //problem lines
-     // Glass card ki position
-    const cardRect = glassCard.getBoundingClientRect();
-
-    // Title ki height
-    const titleBottom =
-    title.getBoundingClientRect().bottom - cardRect.top;
-
-// Button size
-const btnW = noBtn.offsetWidth;
-const btnH = noBtn.offsetHeight;
-
-// Padding
-const padding = 20;
-
-// X movement
-const minX = padding;
-const maxX = cardRect.width - btnW - padding;
-
-// Y movement (title ke niche se)
-const minY = titleBottom + 50;
-const maxY = cardRect.height - btnH - padding;
-
-const randomX =
-    Math.random() * (maxX - minX) + minX;
-
-const randomY =
-    Math.random() * (maxY - minY) + minY;
-
-noBtn.style.position = "absolute";
-noBtn.style.left = randomX + "px";
-noBtn.style.top = randomY + "px";
   
 });
 yesBtn.addEventListener("click", () => {
