@@ -65,11 +65,7 @@ function launchBalloons(){
 
     }
 }
-
-noBtn.addEventListener("click", () => {
-  
-    tries++;
-    function moveOutsideCard() {
+function moveOutsideCard() {
 
     const card = document.querySelector(".glass-card");
 
@@ -98,6 +94,11 @@ noBtn.addEventListener("click", () => {
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 }
+
+noBtn.addEventListener("click", () => {
+  
+    tries++;
+    
     if (tries == 1){
         title.innerHTML = "Aga khar khar sang... 😏";
         moveOutsideCard();
