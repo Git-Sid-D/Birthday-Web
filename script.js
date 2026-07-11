@@ -71,35 +71,26 @@ noBtn.addEventListener("click", () => {
     tries++;
 
     if (tries == 1){
-        noBtn.style.position = "fixed";
         title.innerHTML = "Aga khar khar sang... 😏";
-        noBtn.style.left = "calc(50% - 320px)";
-        noBtn.style.top = "50%";
+        moveOutsideCard();
       
     }
     else if (tries == 2){
          noBtn.style.position = "fixed";
-         title.innerHTML = "Kiti khot bolnar? 😂";
-         noBtn.style.left = "calc(50% + 220px)";
-         noBtn.style.top = "50%";
 
-          setTimeout(() => {
-          subtitle.style.display = "none";
+         setTimeout(() => {
+         subtitle.style.display = "none";
              }, 400);
-          subtitle.classList.add("fade-out");
+         subtitle.classList.add("fade-out");
+         moveOutsideCard();
     }
     else if (tries == 3){
-        noBtn.style.position = "fixed";
         title.innerHTML = "Ho var click kar na... 🤭";
-        noBtn.style.left = "50%";
-        noBtn.style.top = "80%";
-
+        moveOutsideCard();
     }
     else{
-        alert("Fourth click");
         title.innerHTML = "Ata fakta 'Ho' available aahe 😎";
-        noBtn.remove();
-        return;
+        noBtn.style.display = "none";
     }
     
 });
