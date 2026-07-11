@@ -737,3 +737,26 @@ button{
     }
 
 }
+/* ===========================
+   FEATURE 7 : PREMIUM TRANSITIONS
+=========================== */
+
+.screen{
+
+    opacity:0;
+
+    transform:translateY(25px) scale(.98);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+}
