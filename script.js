@@ -204,8 +204,6 @@ nextMemeBtn.addEventListener("click", () => {
 
     if (memeIndex >= memeImages.length) {
 
-        alert("💌 Birthday Message Screen (Feature 4)");
-
         return;
     }
 
