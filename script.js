@@ -100,13 +100,7 @@ noBtn.addEventListener("click", () => {
         noBtn.style.display = "none";
         return;
     }
-    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
-
-    noBtn.style.position = "fixed";
-    noBtn.style.left = Math.random() * maxX + "px";
-    noBtn.style.top = Math.random() * maxY + "px";
-  
+    
 });
 yesBtn.addEventListener("click", () => {
 
