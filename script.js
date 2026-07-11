@@ -15,6 +15,12 @@ const memeImage = document.getElementById("memeImage");
 const memeCaption = document.getElementById("memeCaption");
 const nextMemeBtn = document.getElementById("nextMemeBtn");
 
+const letterScreen = document.getElementById("letterScreen");
+const openLetterBtn = document.getElementById("openLetterBtn");
+const letterContent = document.getElementById("letterContent");
+const typewriterText = document.getElementById("typewriterText");
+const lastSurpriseBtn = document.getElementById("lastSurpriseBtn");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
