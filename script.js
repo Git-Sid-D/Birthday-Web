@@ -181,7 +181,7 @@ function moveOutsideCard() {
     noBtn.style.top = p.y + "px";
 }
 function loadQuiz(){
-
+console.log("Quiz Loaded");
 const q = quizData[currentQuiz];
 
 quizProgress.innerHTML = `Question ${currentQuiz+1} / ${quizData.length}`;
@@ -370,6 +370,7 @@ nextMemeBtn.addEventListener("click", () => {
     memeIndex++;
 
     if (memeIndex >= memeImages.length) {
+        console.log("Quiz Loaded");
         memeScreen.style.display="none";
         quizScreen.style.display="flex";
         currentQuiz = 0;
