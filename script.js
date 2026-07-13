@@ -29,6 +29,12 @@ const liveCountdown = document.getElementById("liveCountdown");
 const pizzaScreen = document.getElementById("pizzaScreen");
 const finishBtn = document.getElementById("finishBtn");
 
+const quizScreen = document.getElementById("quizScreen");
+const quizProgress = document.getElementById("quizProgress");
+const quizQuestion = document.getElementById("quizQuestion");
+const option1 = document.getElementById("option1");
+const option2 = document.getElementById("option2");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -50,6 +56,42 @@ const memeCaptions = [
     "Pan kharach... Tu khup sundar diste ❤️",
     "Happy Birthday Rashmi! Ha divas fakta tujhyasathi... 🎂✨"
 ];
+
+const quizData = [
+
+{
+question:"Aaj konacha Birthday aahe? 🎂",
+options:["Rashmi","Suresh"],
+answer:0
+},
+
+{
+question:"Official Chapri kon aahe? 😂",
+options:["Me","Tu"],
+answer:1
+},
+
+{
+question:"Pizza kon khanar? 🍕",
+options:["Rashmi","Kutra"],
+answer:0
+},
+
+{
+question:"Aajcha Star kon? ⭐",
+options:["Rashmi","Mobile"],
+answer:0
+},
+
+{
+question:"Ready for Final Surprise? 🎁",
+options:["Ho 😍","Ajun Nahi 😴"],
+answer:0
+}
+
+];
+
+let currentQuiz = 0;
 
 let memeIndex = 0;
 
@@ -138,6 +180,48 @@ function moveOutsideCard() {
     noBtn.style.left = p.x + "px";
     noBtn.style.top = p.y + "px";
 }
+function loadQuiz(){
+
+const q = quizData[currentQuiz];
+
+quizProgress.innerHTML = `Question ${currentQuiz+1} / ${quizData.length}`;
+
+quizQuestion.innerHTML = q.question;
+
+option1.innerHTML = q.options[0];
+
+option2.innerHTML = q.options[1];
+
+}
+function checkAnswer(index){
+
+if(index===quizData[currentQuiz].answer){
+
+currentQuiz++;
+
+if(currentQuiz<quizData.length){
+
+loadQuiz();
+
+}else{
+
+quizScreen.style.display="none";
+
+letterScreen.style.display="flex";
+
+}
+
+}else{
+
+alert("😜 Wrong Answer! Punha Try Kar.");
+
+}
+
+}
+
+option1.onclick=()=>checkAnswer(0);
+
+option2.onclick=()=>checkAnswer(1);
 function startTypewriter() {
 
     let i = 0;
@@ -288,6 +372,8 @@ nextMemeBtn.addEventListener("click", () => {
     if (memeIndex >= memeImages.length) {
         memeScreen.style.display="none";
         letterScreen.style.display="flex";
+        currentQuiz = 0;
+        loadQuiz();
         return;
     }
 
