@@ -835,3 +835,14 @@ button{
     transform:scale(.97);
 
 }
+#quizStatus{
+
+    min-height:24px;
+
+    margin-top:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
