@@ -194,55 +194,42 @@ option2.innerHTML = q.options[1];
 }
 function checkAnswer(index){
 
-if(index===quizData[currentQuiz].answer){
+    if(index === quizData[currentQuiz].answer){
 
-currentQuiz++;
+        quizStatus.innerHTML = "✅ Correct! 🎉";
+        quizStatus.style.color = "green";
 
-if(currentQuiz<quizData.length){
+        currentQuiz++;
 
-loadQuiz();
+        setTimeout(() => {
 
-}else{
+            quizStatus.innerHTML = "";
 
-quizScreen.style.display="none";
+            if(currentQuiz < quizData.length){
 
-letterScreen.style.display="flex";
+                loadQuiz();
 
-}
+            }else{
 
-}else{
+                quizScreen.style.display = "none";
+                letterScreen.style.display = "flex";
 
-alert("😜 Wrong Answer! Punha Try Kar.");
+            }
 
-}
+        },700);
 
-}
+    }else{
 
-option1.onclick=()=>checkAnswer(0);
+        quizStatus.innerHTML = "❌ Oops! Punha Try Kar 😄";
+        quizStatus.style.color = "red";
 
-option2.onclick=()=>checkAnswer(1);
-function startTypewriter() {
+        setTimeout(() => {
 
-    let i = 0;
+            quizStatus.innerHTML = "";
 
-    typewriterText.innerHTML = "";
+        },1200);
 
-    const typing = setInterval(() => {
-
-        if (i < birthdayMessage.length) {
-
-            typewriterText.innerHTML += birthdayMessage.charAt(i);
-            i++;
-
-        } else {
-
-            clearInterval(typing);
-
-            lastSurpriseBtn.style.display = "inline-block";
-
-        }
-
-    }, 35);
+    }
 
 }
 function startCountdown() {
