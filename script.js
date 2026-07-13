@@ -32,6 +32,7 @@ const finishBtn = document.getElementById("finishBtn");
 const quizScreen = document.getElementById("quizScreen");
 const quizProgress = document.getElementById("quizProgress");
 const quizQuestion = document.getElementById("quizQuestion");
+const quizStatus = document.getElementById("quizStatus");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 
