@@ -737,3 +737,101 @@ button{
     }
 
 }
+/* ===========================
+   FEATURE 8 : QUIZ SCREEN
+=========================== */
+
+.quiz-card{
+
+    width:100%;
+    max-width:380px;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+#quizTitle{
+
+    color:#ff5d9e;
+
+    margin-bottom:10px;
+
+}
+
+#quizProgress{
+
+    color:#666;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+#quizQuestion{
+
+    color:#333;
+
+    line-height:1.5;
+
+    min-height:70px;
+
+}
+
+.quiz-options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.quizBtn{
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    background:#ff6fa8;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quizBtn:hover{
+
+    transform:scale(1.04);
+
+}
+
+.quizBtn:active{
+
+    transform:scale(.97);
+
+}
