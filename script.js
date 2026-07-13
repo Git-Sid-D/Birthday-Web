@@ -371,7 +371,7 @@ nextMemeBtn.addEventListener("click", () => {
 
     if (memeIndex >= memeImages.length) {
         memeScreen.style.display="none";
-        letterScreen.style.display="flex";
+        quizScreen.style.display="flex";
         currentQuiz = 0;
         loadQuiz();
         return;
