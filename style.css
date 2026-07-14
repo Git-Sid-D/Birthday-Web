@@ -943,11 +943,13 @@ button:hover::after{
 
     border-radius:18px;
 
-    filter:blur(3px);
+    filter:blur(5px);
 
-    opacity:.55;
+    opacity:.35;
 
-    transition:.45s ease;
+    transform:scale(.88);
+
+    transition:all .45s ease;
 
 }
 
@@ -972,5 +974,24 @@ button:hover::after{
     transform:scale(.9);
 
     z-index:2;
+
+}
+.photo-hide{
+
+    opacity:0;
+
+    transform:translateX(-40px) scale(.92);
+
+    transition:all .35s ease;
+
+}
+
+.photo-show{
+
+    opacity:1;
+
+    transform:translateX(0) scale(1);
+
+    transition:all .35s ease;
 
 }
