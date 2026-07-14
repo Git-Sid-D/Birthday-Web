@@ -913,19 +913,23 @@ button:hover::after{
 
     position:relative;
 
-    width:320px;
+    width:300px;
 
-    height:420px;
+    height:380px;
 
-    margin:20px auto;
+    margin:25px auto;
 
     overflow:visible;
+
+    perspective:1000px;
 
 }
 
 .mainImg{
 
     position:absolute;
+
+    inset:0;
 
     width:100%;
 
@@ -937,9 +941,9 @@ button:hover::after{
 
     z-index:3;
 
-    box-shadow:0 18px 40px rgba(0,0,0,.25);
+    box-shadow:0 20px 45px rgba(0,0,0,.22);
 
-    transition:.45s ease;
+    transition:all .45s ease;
 
 }
 
@@ -947,19 +951,19 @@ button:hover::after{
 
     position:absolute;
 
-    width:82%;
+    top:18px;
 
-    height:88%;
+    width:78%;
+
+    height:90%;
 
     object-fit:cover;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    filter:blur(5px);
+    filter:blur(4px);
 
-    opacity:.35;
-
-    transform:scale(.88);
+    opacity:.45;
 
     transition:all .45s ease;
 
@@ -967,11 +971,9 @@ button:hover::after{
 
 #leftPreview{
 
-    left:-45px;
+    left:-95px;
 
-    top:20px;
-
-    transform:scale(.9);
+    transform:scale(.88) rotateY(18deg);
 
     z-index:1;
 
@@ -979,11 +981,9 @@ button:hover::after{
 
 #rightPreview{
 
-    right:-45px;
+    right:-95px;
 
-    top:20px;
-
-    transform:scale(.9);
+    transform:scale(.88) rotateY(-18deg);
 
     z-index:2;
 
