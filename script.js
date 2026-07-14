@@ -240,6 +240,30 @@ option1.addEventListener("click", () => {
 option2.addEventListener("click", () => {
     checkAnswer(1);
 });
+function startTypewriter() {
+
+    let i = 0;
+
+    typewriterText.innerHTML = "";
+
+    const typing = setInterval(() => {
+
+        if (i < birthdayMessage.length) {
+
+            typewriterText.innerHTML += birthdayMessage.charAt(i);
+            i++;
+
+        } else {
+
+            clearInterval(typing);
+
+            lastSurpriseBtn.style.display = "inline-block";
+
+        }
+
+    }, 35);
+
+}
 function startCountdown() {
 
     const timer = setInterval(() => {
