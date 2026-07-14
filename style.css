@@ -111,6 +111,8 @@ button{
     font-weight:600;
     cursor:pointer;
     transition:.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 #yesBtn{
@@ -844,5 +846,52 @@ button{
     font-size:16px;
 
     font-weight:600;
+
+}
+/* ===========================
+   PREMIUM BUTTONS
+=========================== */
+
+button{
+
+    transition:all .25s ease;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+button::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    opacity:0;
+
+    transition:.3s;
+
+}
+
+button:hover::after{
+
+    opacity:1;
+
+    box-shadow:0 0 20px rgba(255,255,255,.35);
 
 }
