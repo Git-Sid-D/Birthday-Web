@@ -233,6 +233,13 @@ function checkAnswer(index){
     }
 
 }
+option1.addEventListener("click", () => {
+    checkAnswer(0);
+});
+
+option2.addEventListener("click", () => {
+    checkAnswer(1);
+});
 function startCountdown() {
 
     const timer = setInterval(() => {
