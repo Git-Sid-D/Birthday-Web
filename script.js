@@ -36,6 +36,9 @@ const quizStatus = document.getElementById("quizStatus");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 
+const leftPreview = document.getElementById("leftPreview");
+const rightPreview = document.getElementById("rightPreview");
+
 const funnyMessages = [
   "😂 Aga khar sang!",
   "😜 Nahi ha option chalnar nahi.",
@@ -385,24 +388,34 @@ continueBtn.addEventListener("click", () => {
 
 nextMemeBtn.addEventListener("click", () => {
 
-    memeIndex++;
-
-    if (memeIndex >= memeImages.length) {
-        memeScreen.style.display="none";
-        quizScreen.style.display="flex";
-        currentQuiz = 0;
-        loadQuiz();
-        return;
-    }
-
-    memeImage.style.opacity = "0";
+    memeImage.classList.add("photo-hide");
 
     setTimeout(() => {
 
+        memeIndex++;
+
+        if (memeIndex >= memeImages.length) {
+
+            memeScreen.style.display = "none";
+            quizScreen.style.display = "flex";
+            currentQuiz = 0;
+            loadQuiz();
+            return;
+
+        }
+
+        leftPreview.src =
+            memeImages[(memeIndex - 1 + memeImages.length) % memeImages.length];
+
         memeImage.src = memeImages[memeIndex];
+
+        rightPreview.src =
+            memeImages[(memeIndex + 1) % memeImages.length];
+
         memeCaption.innerHTML = memeCaptions[memeIndex];
 
-        memeImage.style.opacity = "1";
+        memeImage.classList.remove("photo-hide");
+        memeImage.classList.add("photo-show");
 
     },300);
 
