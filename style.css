@@ -905,87 +905,85 @@ button:hover::after{
     box-shadow:0 0 20px rgba(255,255,255,.35);
 
 }
-/* ===========================
-   PREMIUM STACK GALLERY
-=========================== */
+/* ===== Premium Cover Flow ===== */
 
-.galleryStack{
+.coverflow{
 
     position:relative;
 
-    width:300px;
+    width:100%;
 
-    height:380px;
+    height:360px;
 
-    margin:25px auto;
+    display:flex;
 
-    overflow:visible;
+    justify-content:center;
 
-    perspective:1000px;
+    align-items:center;
+
+    margin:20px 0 30px;
 
 }
 
-.mainImg{
+.cover{
 
     position:absolute;
 
-    inset:0;
+    transition:all .45s ease;
 
-    width:100%;
+}
 
-    height:100%;
+.cover img{
+
+    width:190px;
+
+    height:300px;
 
     object-fit:cover;
 
     border-radius:22px;
 
-    z-index:3;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.22);
-
-    transition:all .45s ease;
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
 
 }
 
-.previewImg{
+.center{
 
-    position:absolute;
+    z-index:3;
 
-    top:18px;
+    transform:scale(1);
 
-    width:78%;
+}
 
-    height:90%;
+.center img{
 
-    object-fit:cover;
+    width:230px;
 
-    border-radius:20px;
+    height:340px;
 
-    filter:blur(4px);
+}
+
+.left{
+
+    left:0;
+
+    transform:scale(.85);
 
     opacity:.45;
 
-    transition:all .45s ease;
+    filter:blur(3px);
 
 }
 
-#leftPreview{
+.right{
 
-    left:-95px;
+    right:0;
 
-    transform:scale(.88) rotateY(18deg);
+    transform:scale(.85);
 
-    z-index:1;
+    opacity:.45;
 
-}
-
-#rightPreview{
-
-    right:-95px;
-
-    transform:scale(.88) rotateY(-18deg);
-
-    z-index:2;
+    filter:blur(3px);
 
 }
 .photo-hide{
