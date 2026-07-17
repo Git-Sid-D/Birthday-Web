@@ -27,7 +27,7 @@ body{
 .bg-blur{
     position:fixed;
     inset:0;
-    backdrop-filter:blur(30px);
+    backdrop-filter:blur(8px);
     z-index:1;
 }
 
@@ -1051,15 +1051,15 @@ body::after{
 
     position:absolute;
 
-    width:3px;
+    width:6px;
 
-    height:3px;
+    height:6px;
 
     border-radius:50%;
 
     background:white;
 
-    box-shadow:0 0 10px white;
+    box-shadow:0 0 18px white;
 
     animation:twinkle 2s ease-in-out infinite;
 
@@ -1071,9 +1071,9 @@ body::after{
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.22);
 
-    border:1px solid rgba(255,255,255,.18);
+    border:2px solid rgba(255,255,255,.45);
 
     backdrop-filter:blur(4px);
 
