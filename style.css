@@ -1154,40 +1154,4 @@ body::after{
     }
 
 }
-/*---------*/
-/* Curtain */
-/*---------*/
 
-#curtainLeft,
-#curtainRight{
-    position:absolute;
-    top:0;
-    width:50%;
-    height:100%;
-    background:linear-gradient(
-        135deg,
-        #ffe8f2,
-        #ffd3e5,
-        #ffc3da
-    );
-    z-index:20;
-    transition:1.6s ease-in-out;
-}
-
-#curtainLeft{
-    left:0;
-    border-right:2px solid rgba(255,255,255,.5);
-}
-
-#curtainRight{
-    right:0;
-    border-left:2px solid rgba(255,255,255,.5);
-}
-
-.openLeft{
-    transform:translateX(-100%);
-}
-
-.openRight{
-    transform:translateX(100%);
-}
