@@ -895,3 +895,67 @@ button:hover::after{
     box-shadow:0 0 20px rgba(255,255,255,.35);
 
 }
+/* ===========================
+   PREMIUM FLOATING LIGHTS
+=========================== */
+
+body::before,
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.30;
+
+    z-index:-1;
+
+    animation:floatGlow 10s ease-in-out infinite;
+
+}
+
+body::before{
+
+    background:#ff7eb6;
+
+    top:-60px;
+
+    left:-60px;
+
+}
+
+body::after{
+
+    background:#7ed6ff;
+
+    bottom:-60px;
+
+    right:-60px;
+
+    animation-delay:5s;
+
+}
+
+@keyframes floatGlow{
+
+    0%,100%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(35px,-25px) scale(1.2);
+
+    }
+
+}
