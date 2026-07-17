@@ -100,6 +100,13 @@ let tries = 0;
 
 const title = document.querySelector(".title");
 
+//---- Curtain -----
+//------------------
+const left = document.getElementById("curtainLeft");
+const right = document.getElementById("curtainRight");
+
+left.classList.add("openLeft");
+right.classList.add("openRight");
 function launchConfetti() {
     confetti({
         particleCount: 220,
