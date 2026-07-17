@@ -27,8 +27,9 @@ body{
 .bg-blur{
     position:fixed;
     inset:0;
-    backdrop-filter:blur(8px);
-    z-index:1;
+    backdrop-filter:blur(18px);
+    z-index:-2;
+    background:rgba(255,255,255,.03);
 }
 
 .container{
@@ -39,7 +40,7 @@ body{
     justify-content:center;
     align-items:center;
     padding:20px;
-    z-index:2;
+    z-index:5;
 }
 
 .glass-card{
@@ -1043,7 +1044,7 @@ body::after{
 
     pointer-events:none;
 
-    z-index:0;
+    z-index:-4;
 
 }
 
@@ -1051,17 +1052,20 @@ body::after{
 
     position:absolute;
 
-    width:6px;
+    width:4px;
 
-    height:6px;
+    height:4px;
 
     border-radius:50%;
 
-    background:white;
+    background:#fff;
 
-    box-shadow:0 0 18px white;
+    box-shadow:0 0 8px #fff,
+               0 0 16px #fff;
 
     animation:twinkle 2s ease-in-out infinite;
+
+    opacity:.8;
 
 }
 
@@ -1071,11 +1075,11 @@ body::after{
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.22);
+    background:rgba(255,255,255,.18);
 
-    border:2px solid rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.35);
 
-    backdrop-filter:blur(4px);
+    backdrop-filter:blur(6px);
 
     animation:floatBubble linear infinite;
 
