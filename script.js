@@ -434,3 +434,54 @@ finishBtn.addEventListener("click", () => {
     alert("🎉 Happy Birthday Rashmi! 🎂");
 
 });
+/* ===========================
+   MAGIC BACKGROUND
+=========================== */
+
+const magicBackground = document.getElementById("magicBackground");
+
+/* ⭐ Stars */
+
+for(let i=0;i<30;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"vw";
+
+    star.style.top=Math.random()*100+"vh";
+
+    star.style.animationDuration=(1.5+Math.random()*2)+"s";
+
+    star.style.animationDelay=(Math.random()*3)+"s";
+
+    star.style.transform=`scale(${0.5+Math.random()})`;
+
+    magicBackground.appendChild(star);
+
+}
+
+/* 🫧 Bubbles */
+
+for(let i=0;i<15;i++){
+
+    const bubble=document.createElement("div");
+
+    bubble.className="bubble";
+
+    const size=20+Math.random()*35;
+
+    bubble.style.width=size+"px";
+
+    bubble.style.height=size+"px";
+
+    bubble.style.left=Math.random()*100+"vw";
+
+    bubble.style.animationDuration=(10+Math.random()*12)+"s";
+
+    bubble.style.animationDelay=(Math.random()*10)+"s";
+
+    magicBackground.appendChild(bubble);
+
+}
