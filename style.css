@@ -906,56 +906,124 @@ body::after{
 
     position:fixed;
 
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    z-index:-1;
+
+    animation:floatGlow 14s ease-in-out infinite;
+
+}
+
+/* Pink */
+body::before{
+
+    background:#ff6fa8;
+
+    top:-70px;
+
+    left:-70px;
+
+}
+
+/* Sky Blue */
+body::after{
+
+    background:#7ed6ff;
+
+    bottom:-70px;
+
+    right:-70px;
+
+    animation-delay:7s;
+
+}
+
+/* Purple Light */
+.container::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:#c99cff;
+
+    filter:blur(110px);
+
+    opacity:.16;
+
+    top:45%;
+
+    left:-60px;
+
+    z-index:-1;
+
+    animation:floatGlow2 18s ease-in-out infinite;
+
+}
+
+/* Golden Light */
+.container::after{
+
+    content:"";
+
+    position:fixed;
+
     width:220px;
 
     height:220px;
 
     border-radius:50%;
 
-    filter:blur(90px);
+    background:#ffe27a;
 
-    opacity:.30;
+    filter:blur(110px);
+
+    opacity:.14;
+
+    bottom:8%;
+
+    right:12%;
 
     z-index:-1;
 
-    animation:floatGlow 10s ease-in-out infinite;
-
-}
-
-body::before{
-
-    background:#ff7eb6;
-
-    top:-60px;
-
-    left:-60px;
-
-}
-
-body::after{
-
-    background:#7ed6ff;
-
-    bottom:-60px;
-
-    right:-60px;
-
-    animation-delay:5s;
+    animation:floatGlow3 16s ease-in-out infinite;
 
 }
 
 @keyframes floatGlow{
 
-    0%,100%{
+    0%,100%{transform:translate(0,0) scale(1);}
 
-        transform:translate(0,0) scale(1);
+    50%{transform:translate(45px,-35px) scale(1.25);}
 
-    }
+}
 
-    50%{
+@keyframes floatGlow2{
 
-        transform:translate(35px,-25px) scale(1.2);
+    0%,100%{transform:translate(0,0);}
 
-    }
+    50%{transform:translate(60px,-50px);}
+
+}
+
+@keyframes floatGlow3{
+
+    0%,100%{transform:translate(0,0);}
+
+    50%{transform:translate(-50px,40px);}
 
 }
