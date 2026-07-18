@@ -122,7 +122,7 @@ function launchBalloons(){
         "#b366ff"
     ];
 
-    for(let i = 0; i < 25; i++){
+    for(let i = 0; i < 12; i++){
 
         const balloon = document.createElement("div");
 
