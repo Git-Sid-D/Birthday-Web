@@ -33,6 +33,11 @@ body{
     background:linear-gradient(135deg,#ffd9e8,#ffeecf,#dff8ff,#e7ddff);
     background-size:400% 400%;
     animation:bgMove 10s ease infinite;
+
+    /*-------*/
+    html,body{
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
 @keyframes bgMove{
@@ -135,6 +140,18 @@ button{
     transition:.25s ease;
     position: relative;
     overflow: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/**********/
+button:focus,
+button:focus-visible,
+button:active{
+    outline: none;
+    box-shadow: none;
 }
 
 #yesBtn{
