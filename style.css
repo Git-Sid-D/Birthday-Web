@@ -236,6 +236,22 @@ button:active{
     font-weight:700;
 
     margin-bottom:20px;
+    /*******/
+    text-shadow:
+                0 0 15px rgba(255,255,255,.8),
+                0 0 35px rgba(255,111,168,.6);
+                animation: countdownPulse 1s infinite;
+
+}
+@keyframes countdownPulse{
+
+0%,100%{
+    transform:scale(1);
+}
+
+50%{
+    transform:scale(1.18);
+}
 
 }
 
