@@ -348,8 +348,7 @@ button:active{
     width: 60px;
     height: 80px;
     border-radius: 50%;
-    animation: floatUp var(--speed) linear forwards,
-               balloonSwing 3s ease-in-out infinite;
+    animation: floatUp 7s linear forwards;
 }
 
 .balloon::after{
