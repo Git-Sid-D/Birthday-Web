@@ -1226,3 +1226,30 @@ button:active::before{
     width:250px;
     height:250px;
 }
+/* Premium Floating Cards */
+
+.glass-card,
+.birthday-card,
+.meme-card,
+.quiz-card,
+.letter-card,
+.countdown-card,
+.pizza-card{
+
+    animation:
+        cardUp .8s ease,
+        floatingCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatingCard{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
