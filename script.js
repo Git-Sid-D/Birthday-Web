@@ -126,9 +126,11 @@ function launchBalloons(){
 
         const balloon = document.createElement("div");
 
+        balloon.style.animationDelay=(math.random()*2.5)+"s";
+      
         balloon.classList.add("balloon");
 
-        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.left = (5 + Math.random() * 90) + "vw";
 
         balloon.style.background =
             colors[Math.floor(Math.random() * colors.length)];
