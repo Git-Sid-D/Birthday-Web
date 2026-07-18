@@ -5,7 +5,24 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
+/* Remove mobile blue tap highlight */
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+img,
+div{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+button:focus,
+button:active{
+    outline: none;
+}
 body{
     width:100%;
     height:100vh;
