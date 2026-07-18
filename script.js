@@ -366,6 +366,7 @@ yesBtn.addEventListener("click", () => {
             launchBalloons();
           
             birthdayTitle.style.display = "block";
+            birthdayTitle.style.animationPlayState = "running";
 
             birthdaySub.style.display = "block";
 
