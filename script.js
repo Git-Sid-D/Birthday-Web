@@ -406,6 +406,7 @@ nextMemeBtn.addEventListener("click", () => {
     }
 
     memeImage.style.opacity = "0";
+    memeImage.style.transform="scale(.92)";
 
     setTimeout(() => {
 
@@ -413,6 +414,7 @@ nextMemeBtn.addEventListener("click", () => {
         memeCaption.innerHTML = memeCaptions[memeIndex];
 
         memeImage.style.opacity = "1";
+        memeImage.style.transform="scale(1)";
 
     },300);
 
