@@ -422,7 +422,8 @@ button:active{
 
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 
-    transition:.4s;
+    transition:opacity .35s ease, transform .35s ease;
+    transform:scale(1);
 
 }
 
