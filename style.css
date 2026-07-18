@@ -344,7 +344,7 @@ button:active{
 
 .balloon{
     position: absolute;
-    bottom: -120px;
+    bottom: --80px;
     width: 42px;
     height: 58px;
     border-radius: 50%;
