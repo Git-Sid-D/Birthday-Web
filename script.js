@@ -365,7 +365,16 @@ yesBtn.addEventListener("click", () => {
             launchConfetti();
             launchBalloons();
           
-            birthdayTitle.style.display = "block";
+            birthdayTitle.style.display = "flex";
+            const card = document.querySelector(".birthday-card");
+            card.style.transform = "scale(.8)";
+            card.style.opacity = "0";
+            setTimeout(() => {
+                card.style.transition = ".6s ease";
+                card.style.transform = "scale(1)";
+                card.style.opacity = "1";
+            },50);
+          
             birthdayTitle.style.animationPlayState = "running";
 
             birthdaySub.style.display = "block";
