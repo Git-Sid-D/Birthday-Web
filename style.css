@@ -132,7 +132,7 @@ button{
     font-size:16px;
     font-weight:600;
     cursor:pointer;
-    transition:.3s;
+    transition:.25s ease;
     position: relative;
     overflow: hidden;
 }
@@ -1140,3 +1140,31 @@ body::after{
 
 }
 
+/* Premium Button Animation */
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(255,111,168,.35);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+button::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:0;
+    height:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    transform:translate(-50%,-50%);
+    transition:width .4s,height .4s;
+}
+
+button:active::before{
+    width:250px;
+    height:250px;
+}
