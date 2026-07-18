@@ -136,6 +136,10 @@ function launchBalloons(){
         balloon.style.animationDuration =
             (5 + Math.random() * 3) + "s";
 
+        balloon.style.setProperty("--speed",(5+Math.random()*3)+"s");
+        balloon.style.opacity = 0.85;
+        balloon.style.transform = `scale(${0.7 + Math.random()*0.6})`;
+      
         container.appendChild(balloon);
 
         setTimeout(() => {
