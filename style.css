@@ -1254,3 +1254,28 @@ button:active::before{
     }
 
 }
+
+@keyframes glowButton{
+
+0%,100%{
+    box-shadow:0 8px 20px rgba(255,111,168,.25);
+}
+
+50%{
+    box-shadow:
+    0 8px 25px rgba(255,111,168,.45),
+    0 0 18px rgba(255,111,168,.35);
+}
+
+}
+
+#yesBtn,
+#continueBtn,
+#nextMemeBtn,
+#openLetterBtn,
+#lastSurpriseBtn,
+#finishBtn{
+
+    animation:glowButton 2.5s ease-in-out infinite;
+
+}
