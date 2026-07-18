@@ -137,7 +137,7 @@ function launchBalloons(){
             (5 + Math.random() * 3) + "s";
 
         balloon.style.setProperty("--speed",(5+Math.random()*3)+"s");
-        balloon.style.opacity = 0.85;
+        balloon.style.opacity = 0.55;
       
         container.appendChild(balloon);
 
